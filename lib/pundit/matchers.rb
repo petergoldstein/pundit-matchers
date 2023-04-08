@@ -53,6 +53,7 @@ module Pundit
     actions.flatten!
     match do |policy|
       return false if actions.count < 1
+
       @allowed_actions = actions.select do |action|
         policy.public_send("#{action}?")
       end
@@ -215,6 +216,7 @@ module Pundit
     actions.flatten!
     match do |policy|
       return false if actions.count < 1
+
       @forbidden_actions = actions.reject do |action|
         policy.public_send("#{action}?")
       end
@@ -235,6 +237,7 @@ module Pundit
         tests would pass.'
 
       return true if actions.count < 1
+
       @forbidden_actions = actions.reject do |action|
         policy.public_send("#{action}?")
       end

@@ -35,6 +35,7 @@ describe 'permit_action matcher' do
         class PermitActionTestPolicy3
           def test?(argument)
             raise unless argument == 'argument'
+
             true
           end
         end
@@ -49,6 +50,7 @@ describe 'permit_action matcher' do
         class PermitActionTestPolicy4
           def test?(argument)
             raise unless argument == 'argument'
+
             false
           end
         end
@@ -65,6 +67,7 @@ describe 'permit_action matcher' do
         class PermitActionTestPolicy5
           def test?(one, two, three)
             raise unless one == 'one' && two == 'two' && three == 'three'
+
             true
           end
         end
@@ -79,6 +82,7 @@ describe 'permit_action matcher' do
         class PermitActionTestPolicy6
           def test?(one, two, three)
             raise unless one == 'one' && two == 'two' && three == 'three'
+
             false
           end
         end

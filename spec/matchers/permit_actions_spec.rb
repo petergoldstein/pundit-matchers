@@ -11,7 +11,7 @@ describe 'permit_actions matcher' do
 
     subject { PermitActionsTestPolicy0.new }
 
-    it "prints a warning message" do
+    it 'prints a warning message' do
       expect(::Kernel).to receive(:warn) do |message|
         expect(message).to match(/Please use `\.to forbid_actions` instead/)
       end
