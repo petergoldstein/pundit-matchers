@@ -4,3 +4,4 @@ AllCops:
   TargetRubyVersion: 3.0
   Exclude:
     - bin/**/*.rb
+    - vendor/bundle/**/*.rb
